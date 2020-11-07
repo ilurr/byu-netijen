@@ -1,0 +1,110 @@
+.survey {
+	position: relative;
+	&-wrapper {
+		position: relative;
+		width: 100%;
+		// height: 100%;
+		padding-top: 8vh;
+		padding-bottom: 18vh;
+		// overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+		@include min-responsive($screen-tablet) {
+			padding-top: 10vh;
+			padding-bottom: 20vh;
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
+		@include min-responsive($screen-large-desktop) {
+			padding-right: 25%;
+			padding-left: 25%;
+		}
+		@include min-responsive($screen-super-desktop) {
+			padding-right: 15%;
+			padding-left: 15%;
+		}
+		& + .main-footer .main-footer-wrap {
+			background: $color-theme;
+		}
+	}
+	&-item {
+		position: relative;
+		padding: 4vh 0;
+		@include min-responsive($screen-tablet) {
+			padding: 3vh 0;
+		}
+		@include min-responsive($screen-super-desktop) {
+			padding: 4.125vh 0;
+		}
+	}
+	&-question {
+		position: relative;
+		text-align: center;
+		margin: 0;
+		padding: 0 1rem;
+		@include font-pack(false, 1rem, 700, false, #fff);
+		@include min-responsive($screen-tablet) {
+			font-size: 1.313rem;
+		}
+		@include min-responsive($screen-super-desktop) {
+			font-size: 2.118rem;
+		}
+	}
+	&-label {
+		position: relative;
+		width: 25%;
+		flex-grow: 0;
+		padding: 0 .25rem;
+		text-align: center;
+		@include font-pack(false, .875rem, 400, false, #fff);
+		@include min-responsive($screen-tablet) {
+			padding: 0 1.5rem;
+			font-size: 1.313rem;
+		}
+		@include min-responsive($screen-super-desktop) {
+			font-size: 2rem;
+		}
+	}
+	&-option {
+		position: relative;
+		@include display-flex();
+		justify-content: center;
+		align-items: center;
+		flex-grow: 1;
+		padding: 1rem 0;
+		@include min-responsive($screen-tablet) {
+			padding: 1.5rem 0;
+		}
+		@include min-responsive($screen-super-desktop) {
+			padding: 1.75rem 0;
+		}
+	}
+	&-radio {
+		position: relative;
+		@include display-flex();
+		justify-content: center;
+		align-items: center;
+		@include min-responsive($screen-super-desktop) {
+			.form-radio > input[type=radio] {			
+				width: 60px;
+				height: 60px;
+			}
+			.form-radio > span {
+				width: 60px;
+				height: 60px;
+				border-radius: 60px;
+			}
+		}
+		label {
+			margin: 0 3px;
+			padding-bottom: 0;
+			@include min-responsive($screen-tablet) {
+				margin: 0 1rem;
+			}
+		}
+	}
+	&-item.-error {
+		.survey-question {
+			@include animation(shaky .2s 5 ease forwards);
+		}
+	} 
+}

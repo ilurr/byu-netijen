@@ -1,0 +1,212 @@
+.bundling {
+	position: relative;
+	// &-bg {
+	// 	position: absolute;
+	// 	top: -100%;
+	// 	left: 0;
+	// 	width: 100%;
+	// 	z-index: 1;
+	// }
+	&-big {
+		position: relative;
+		padding: 1rem;
+		background: #fff;
+		border-radius: 12px;
+		@include display-flex();
+		justify-content: space-between;
+		align-content: center;
+		flex-wrap: wrap;
+		margin-bottom: 2rem;
+		@include min-responsive($screen-tablet) {
+			flex-wrap: nowrap;
+		}
+	}
+	&-img {
+		position: relative;
+		flex-grow: 0;
+		margin-top: 1rem;
+		margin-bottom: -1rem;
+		text-align: center;
+		width: 100%;
+		order: 2;
+		@include min-responsive($screen-tablet) {
+			margin-top: 0;
+			width: 35%;
+			flex-basis: 35%;
+			order: 0;
+		}
+		img {
+			max-width: none;
+			height: 250px;
+			@include min-responsive($screen-super-desktop) {
+				height: 290px;
+			}
+		}
+	}
+	&-col {
+		position: relative;
+		flex-grow: 1;
+		flex-basis: 0;
+		@include display-flex();
+		justify-content: center;
+		align-content: center;
+		flex-wrap: wrap;
+		order: 1;
+		@include min-responsive($screen-tablet) {
+			order: 0;
+		}
+	}
+	&-title {
+		position: relative;
+		@include font-pack(false, 1.25rem, 700, false, false);
+	}
+	&-price {
+		position: relative;
+		text-align: right;
+		@include font-pack(false, 1.375rem, 700, false, false);
+		flex-basis: 110px;
+		flex-grow: 0;
+	}
+	&-quota {
+		position: relative;
+		// text-transform: uppercase;
+		flex-grow: 1;
+		flex-basis: 0;
+		@include font-pack(false, 1.25rem, 700, 1.25, false);
+		@include min-responsive($screen-tablet) {
+			font-size: 1.5rem;
+		}
+		span {
+			display: block;
+			text-transform: initial;
+			@include font-pack(false, .875rem, 400, false, #6A7481);
+		}
+		em {
+			font-style: normal;
+			font-weight: 400;
+			font-size: 2rem;
+			&:before {
+				content: "";
+				padding-right: .5rem;
+				font-size: 4rem;
+				display: block;
+				@include min-responsive($screen-large-desktop) {
+					content: "|";
+					display: inline;
+				}
+			}
+		}
+	}
+	&-item {
+		position: relative;
+		padding: .5rem 1rem;
+		margin: 2rem 0 2rem 1.75rem;
+		background: #fff;
+		border-radius: 10px;
+		@include display-flex();
+		justify-content: space-between;
+		align-items: center;
+		border: 1px solid #dfdfdf;
+		@include min-responsive($screen-large-desktop) {
+			margin: 2rem 3.5rem 2rem 6.5rem;
+		}
+	}
+	&-icon {
+		position: relative;
+		margin-left: -2.75rem;
+		flex-basis: 50px;
+		flex-grow: 0;
+		@include min-responsive($screen-tablet) {
+			margin-left: -3rem;
+			flex-basis: 70px;
+		}
+		img {
+			height: 50px;
+			// box-shadow: 0 0 10px rgba(0,0,0,.1);
+			@include min-responsive($screen-tablet) {
+				height: 70px;
+			}
+		}
+	}
+	&-info {
+		position: relative;
+		flex-basis: 0;
+		flex-grow: 1;
+		@include display-flex();
+		justify-content: space-between;
+		align-items: center;
+		padding-left: 1rem;
+		@include min-responsive($screen-tablet) {
+			padding-left: 1.5rem;
+		}
+	}
+	&-choice {
+		position: absolute;
+		top: 1rem;
+		left: 0;
+		background: #28903B;
+		padding: .5rem 2rem;
+		height: 42px;
+		@include font-pack(false, 1.25rem, 700, false, #fff);
+		&:after {
+			content: '';
+			position: absolute;
+			right: -21px;
+			top: 0;
+			border-left: 21px solid transparent;
+			border-right: 21px solid transparent;
+			border-top: 21px solid #28903B;
+			border-bottom: 21px solid #28903B;
+		}
+	}
+	&-bg {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		background-position: right center;
+	}
+	&-big {
+		.bundling-quota {
+			width: 100%;
+			text-align: center;
+			padding: 1rem 0;
+			font-size: 3.5rem;
+			line-height: 1;
+			color: $color-theme;
+			flex-basis: auto;
+			@include min-responsive($screen-tablet) {
+				font-size: 4rem;
+			}
+			span {
+				padding-top: 1rem;
+			}
+		}
+		.bundling-price {
+			font-size: 1.75rem;
+			flex-basis: auto;
+			@include min-responsive($screen-tablet) {
+				font-size: 2rem;
+			}
+		}
+		&.-choice {
+			padding-top: 4.5rem;
+			padding-right: 2rem;
+			padding-left: 2rem;
+			padding-bottom: 1.25rem;
+			@include min-responsive($screen-tablet) {
+				margin-left: 3rem;
+				margin-right: 3rem;
+			}
+			.bundling-col {
+				justify-content: flex-start;
+			}
+			.bundling-quota {
+				text-align: left;
+			}
+		}
+	}
+}

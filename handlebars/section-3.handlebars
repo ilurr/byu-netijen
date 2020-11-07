@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{>head}}
+
+<body>
+	<!-- s: root -->
+	<div class="root">
+
+		<!-- section -->
+		<main class="main -section">
+
+			<div class="main-ornament -one picturefill-background">
+				<span data-src="asset/images/section-graphic-elements-top-m@2x.png"></span>
+				<span data-src="asset/images/section-graphic-elements-top-t@2x.png" data-media="(min-width: 768px)"></span>
+				<span data-src="asset/images/section-graphic-elements-left@2x.png" data-media="(min-width: 1200px)"></span>
+			</div>
+			<div class="main-ornament -two picturefill-background">
+				<span data-src="asset/images/section-graphic-elements-bottom-m@2x.png"></span>
+				<span data-src="asset/images/section-graphic-elements-bottom-t@2x.png" data-media="(min-width: 768px)"></span>
+				<span data-src="asset/images/section-graphic-elements-right@2x.png" data-media="(min-width: 1200px)"></span>
+			</div>
+
+			<form action="result.html">
+			<div class="main-wrapper">
+				<div class="main-header">
+					<div class="main-subtitle">Bagian 1 dari 3</div>
+				</div>
+				<div class="survey-wrapper" id="wrapper-scroll">
+					{{>surveyItem id="0" content="s01,s02,s03,s04" name="surveyRadioS0" question="Jadi atlet maraton film adalah jalan ninjaku!"}}
+					{{>surveyItem id="1" content="s11,s12,s13,s14" name="surveyRadioS1" question="Bela-belain potong uang jajan demi akun premium di aplikasi musik berbayar"}}
+					{{>surveyItem id="2" content="s21,s22,s23,s24" name="surveyRadioS2" question="Banyak <em>wishlist</em>, jarang <em>checkout</em>"}}
+					{{>surveyItem id="3" content="s31,s32,s33,s34" name="surveyRadioS3" question="Kalender penuh sama jadwal <em>online class</em>"}}
+					{{>surveyItem id="4" content="s41,s42,s43,s44" name="surveyRadioS4" question="Bisa kerja <em>remote</em> 24/7"}}
+					{{>surveyItem id="5" content="s51,s52,s53,s54" name="surveyRadioS5" question="Cari inspirasi dekorasi kamar <em>aesthetic</em>"}}
+					{{>surveyItem id="6" content="s61,s62,s63,s64" name="surveyRadioS6" question="Workout <em>online</em> biar kayak Bachdim <em>family</em>"}}
+					{{>surveyItem id="7" content="s71,s72,s73,s74" name="surveyRadioS7" question="Konten viral, <em>I’m coming</em>!"}}
+					{{>surveyItem id="8" content="s81,s82,s83,s84" name="surveyRadioS8" question="Cari teman baru di <em>dating apps</em>, siapa tahu jodoh!"}}
+				</div>
+				<div class="main-footer">
+					<div class="main-footer-wrap">
+						<div class="main-footer-text"><span id="survey-complete">0</span> dari <span>5</span> pertanyaan terjawab</div>
+						<div class="main-footer-button">
+							<div class="main-scroll-wrap" id="button-scroll">
+								<a href="#" class="main-scroll">
+									<span class="icon icon-wheel"></span>
+									Scroll ke bawah
+								</a>
+							</div>
+							<button type="button" class="button -primary" onclick="return validateRadio()">
+								Lihat hasil tes
+							</button>
+							<!-- <a href="result-creator-sultan.html" class="button -primary">Lihat hasil tes</a> -->
+							{{!-- <a href="section-2.html" class="button main-arrow">
+								<span class="icon icon-arrow icon-arrow-right"></span>
+							</a> --}}
+						</div>
+					</div>
+				</div>
+			</div>
+			</form>
+
+		</main>
+
+	</div>
+	<!-- e: root -->
+
+{{>js}}
+<script>
+	let sradio = document.querySelectorAll('[type="radio"]');
+	if(!!sradio) {
+		sradio.forEach(function(item){
+			item.addEventListener('click', function(e){
+				let par = item.closest('.survey-item');
+				par.classList.remove('-error');
+			});
+		});
+	}
+
+	function validateRadio() {
+		console.log('check')
+		let group = []
+
+		if(!!sradio) {
+			// check group
+			sradio.forEach(function(item){
+				let sname = item.getAttribute('name');
+				if(group.indexOf(sname)===-1) {
+					group.push(sname);
+				}
+			});
+
+			// check each group
+			let top = false
+			let check = true
+			group.forEach(function(item){
+				let sitem = document.getElementsByName(item);
+				let svalid = false;
+				let i = 0;
+				while (!svalid && i < sitem.length) {
+					if (sitem[i].checked) svalid = true;
+					i++;
+				}
+				if(!svalid) {
+					check = false
+					let parentItem = sitem[0].closest('.survey-item')
+					let parentItemId = parentItem.getAttribute('id')
+					parentItem.classList.add('-error')
+
+					// scroll to top
+					if(!top) {
+						scrollTo(document.documentElement, document.getElementById(parentItemId), 400);
+						top = true
+					}
+				} 
+			});
+
+			if(check) {
+				window.location.href = "result-ternak-sultan.html"
+			}
+			//return true
+		}
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<div class="survey-item" id="item{{id}}">
+	<h2 class="survey-question">{{{question}}}</h2>
+	<div class="survey-option">
+		<div class="survey-label">Gak Juga</div>
+		<div class="survey-radio">
+			{{#each (split content ",") as |item|}}
+			{{>radio id=item name=../name}}
+			{{/each}}
+		</div>
+		<div class="survey-label">Gue Banget</div>
+	</div>
+</div>

@@ -1,0 +1,31 @@
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+
+	<!-- url bar color theme -->
+	{{!-- <meta name="theme-color" content="#01C2F3">
+	<meta name="msapplication-navbutton-color" content="#01C2F3">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="theme-color" content="#01C2F3">
+	<meta name="msapplication-navbutton-color" content="#01C2F3">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#01C2F3"> --}}
+
+	<!-- icon -->
+	<link rel="shortcut icon" href="asset/images/icon.jpg" type="image/jpeg" />
+    {{!>favicon}}
+
+    <title>by.U</title>
+    
+	<!-- font -->
+	{{>font font=font}}
+
+	{{#if mobile}}
+    <link href="asset/css/style-m.css" rel="stylesheet" type="text/css">
+	{{else}}
+    <link href="asset/css/style.css" rel="stylesheet" type="text/css">
+	{{/if}}
+
+</head>

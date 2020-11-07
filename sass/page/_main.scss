@@ -1,0 +1,412 @@
+.main {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	// min-height: 100vh;
+	// @supports (-webkit-touch-callout: none) {
+	// 	/* The hack for Safari */
+	// 	// height: -webkit-fill-available;
+	// 	min-height: -webkit-fill-available;
+	// }
+	&.-result {
+		@include min-responsive($screen-desktop) {
+			&:after {
+				content: '';
+				position: fixed;
+				width: 45%;
+				top: 0;
+				right: 0;
+				height: 100%;
+				background: #fff;
+				z-index: -1;
+			}
+			&:before {
+				content: '';
+				position: fixed;
+				width: 55%;
+				top: 0;
+				left: 0;
+				height: 16vh;
+				background: $color-theme;
+				z-index: 6;
+			}
+		}
+	}
+	&-ornament {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-size: 100% auto;
+		z-index: 4;
+		pointer-events: none;
+		// @include min-responsive($screen-tablet) {
+		// 	position: fixed;
+		// }
+		&.-one {
+			background-position: center top;
+			@include min-responsive($screen-large-desktop) {
+				background-size: auto 100%;
+				background-position: left center;
+			}
+		}
+		&.-two {
+			background-position: center bottom;
+			@include min-responsive($screen-large-desktop) {
+				background-size: auto 100%;
+				background-position: right center;
+			}
+		}
+	}
+	&.-result {
+		@include max-responsive($screen-tablet-max) {
+			.main-ornament.-one {
+				z-index: 6;
+				position: absolute;
+			}
+			.main-ornament.-two {
+				z-index: 6;
+			}
+		}
+	}
+	&.-section {
+		// @include min-responsive($screen-tablet) {
+			.main-ornament.-one,
+			.main-ornament.-two {
+				z-index: 6;
+			}
+		// }
+	}
+	&-img {
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 55%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: auto 100%;
+		z-index: 5;
+		pointer-events: none;
+		@include min-responsive($screen-tablet) {
+			top: 45%;
+		}
+		@include min-responsive($screen-desktop) {
+			top: 0;
+			background-position: 60% center;
+		}
+		@include min-responsive($screen-large-desktop) {
+			background-position: right center;
+		}
+	}
+	&-wrapper {
+		position: relative;
+		z-index: 5;
+		width: 100%;
+		@include display-flex();
+		justify-content: center;
+		&.-teaser {
+			height: 100%;
+			align-items: center;
+		}
+	}
+	&-home {
+		position: relative;
+		z-index: 5;
+		width: 100%;
+		height: 55vh;
+		@include display-flex();
+		justify-content: center;
+		align-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		// flex-direction: column;
+		padding-bottom: 20px;
+		@include min-responsive($screen-tablet) {
+			height: 40vh;
+		}
+		@include min-responsive($screen-desktop) {
+			padding-bottom: 0;
+			width: 50%;
+			height: 100vh;
+		}
+	}
+	&-logo {
+		position: relative;
+		img {
+			height: 90px;
+			@include min-responsive($screen-desktop) {
+				height: 120px;
+			}
+			@include min-responsive($screen-super-desktop) {
+				height: 150px;
+			}
+		}
+	}
+	&-subtitle {
+		position: relative;
+		@include font-pack(false, 1rem, 700, 1.1, #fff);
+		padding: 0 2rem;
+		text-align: center;
+		width: 100%;
+		@include min-responsive($screen-desktop) {
+			text-align: left;
+		}
+		@include min-responsive($screen-super-desktop) {
+			padding: 0 3rem;
+			font-size: 1.75rem;
+		}
+	}
+	&-title {
+		position: relative;
+		margin: 2rem 1rem; 
+		text-align: center;
+		width: 100%;
+		@include font-pack(false, 2.5rem, 700, 1.1, #fff);
+		@include min-responsive($screen-desktop) {
+			margin: 8vh 1rem; 
+			font-size: 3.5rem;
+		}
+		@include min-responsive($screen-large-desktop) {
+			font-size: 4.5rem;
+		}
+		@include min-responsive($screen-super-desktop) {
+			font-size: 5rem;
+			margin: 10vh; 
+		}
+	}
+	&-teaser {
+		width: 100%;
+		position: relative;
+		text-align: center;
+		padding: 0 1.5rem;
+		@include min-responsive($screen-tablet) {
+			width: 50%;
+		}
+		p {
+			@include font-pack(false, 1rem, 700, false, #fff);
+			@include min-responsive($screen-tablet) {
+				font-size: 1.375rem;
+			}
+			@include min-responsive($screen-super-desktop) {
+				margin: 2.5rem 0;
+				font-size: 2.375rem;
+			}
+		}
+	}
+	&-header {
+		position: fixed;
+		height: 8vh;
+		top: 0;
+		width: 100%;
+		z-index: 4;
+		@include display-flex();
+		justify-content: flex-start;
+		align-items: center;
+		// background: $color-theme;
+		@include min-responsive($screen-tablet) {
+			height: 10vh;
+		}
+		&:after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+			height: 8vh;
+			background: $color-theme;
+			z-index: -1;
+			// @include min-responsive($screen-tablet) {
+			// 	width: 80%;
+			// 	height: 10vh;
+			// }
+		}
+	}
+	&-footer {
+		position: fixed;
+		bottom: 0;
+		z-index: 3;
+		width: 100%;
+		pointer-events: none;
+		&-wrap {
+			position: relative;
+			@include display-flex();
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			flex-direction: column;
+			margin-left: auto;
+			margin-right: auto;
+			// background: $color-theme;
+			width: 100%;
+			height: 18vh;
+			@include max-responsive-landscape($screen-tablet-max) {
+				height: 20vh;
+			}
+			@include min-responsive($screen-tablet) {
+				height: 20vh;
+			}
+			@include min-responsive($screen-large-desktop) {
+				width: 50%;
+			}
+		}
+		&-text {
+			position: relative;
+			// width: 100%;
+			text-align: center;
+			@include font-pack(false, .875rem, false, false, #fff);
+			@include min-responsive($screen-super-desktop) {
+				font-size: 1.75rem;
+				padding-bottom: 1rem;
+			}
+		}
+		&-button {
+			position: relative;
+			@include display-flex();
+			justify-content: center;
+			align-items: center;
+			pointer-events: all;
+			// @include min-responsive($screen-super-desktop) {
+			// 	padding: 1rem 0;
+			// }
+			.-primary {
+				margin: 14px 0;
+				@include min-responsive($screen-tablet) {
+					margin: 11px 0;
+				}
+			}
+		}
+	}
+	&-arrow {
+		padding: 0;
+		margin: 10px 5px;
+		// border: 2px solid #fff;
+		width: 50px;
+		height: 50px;
+		background: transparent;
+		@include transform(scale(.875));
+		@include min-responsive($screen-tablet) {
+			margin: 10px 10px;
+			@include transform(scale(1));
+		}
+		@include min-responsive($screen-super-desktop) {
+			margin: 10px 1.5rem;
+			@include transform(scale(1.3));
+		}
+		.icon-arrow-left {
+			@include transform(rotate(-40deg) scale(1.5));
+			margin-left: 3px;
+		}
+		.icon-arrow-right {
+			@include transform(rotate(135deg) scale(1.5));
+			margin-right: 3px;
+		}
+		&:hover {
+			.icon-arrow:after {
+				border-top: 2px solid $color-theme;
+				border-left: 2px solid $color-theme;
+			}
+		}
+	}
+	&-scroll {
+		display: block;
+		width: 120px;
+		@include font-pack(false, .875rem, false, false, #fff);
+		text-align: center;
+		@include min-responsive($screen-super-desktop) {
+			width: 200px;
+			font-size: 1.5rem;
+		}
+		&:hover {
+			color: #fff;
+		}
+		.icon {
+			@include transform(scale(.7));
+			@include animation(bounce-smartattacker 2s 2s infinite);
+		}
+		&-wrap {
+			position: absolute;
+			top: 0;
+			z-index: 4;
+			// padding: 0 2rem;
+			padding: 0 5rem;
+			background: $color-theme;
+			@include transition(all .2s ease);
+			opacity: 1;
+			&.-hide {
+				opacity: 0;
+				visibility: hidden;
+			}
+		}
+	}
+
+	// override
+	&-wrapper {
+		&.-result {
+			flex-wrap: wrap;
+			@include min-responsive($screen-desktop) {
+				flex-wrap: nowrap;
+			}
+			&:after {
+				content: '';
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+				left: 0;
+				height: 15vh;
+				background: $color-theme;
+				z-index: 2;
+				@include max-responsive-landscape($screen-tablet-max) {
+					height: 20vh;
+				}
+				@include min-responsive($screen-desktop) {
+					width: 55%;
+				}
+			}
+			.main-footer {
+				left: 0;
+				width: 100%;
+				height: 15vh;
+				@include max-responsive-landscape($screen-tablet-max) {
+					height: 20vh;
+				}
+				@include min-responsive($screen-desktop) {
+					width: 55%;
+				}
+			}
+			.main-footer-wrap {
+				height: 15vh;
+				@include max-responsive-landscape($screen-tablet-max) {
+					height: 20vh;
+				}
+				// @include min-responsive($screen-tablet) {
+				// 	height: 15vh;
+				// }
+			}
+			.result-wrapper {
+				.social-block {
+					position: absolute;
+					right: 0;
+					bottom: 15px;
+					z-index: 1;
+					@include min-responsive($screen-large-desktop) {
+						bottom: 16px;
+					}
+					@include min-responsive($screen-retina) {
+						bottom: 45px;
+					}
+				}
+				.social-box {
+					@include max-responsive($screen-tablet-max) {
+						left: unset;
+						right: 0;
+						top: 11px;
+						padding-right: 55px;
+						padding-left: 4px;
+					}
+				}
+			}
+		}
+	}
+}
