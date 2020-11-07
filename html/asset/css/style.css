@@ -576,7 +576,7 @@ button,
       padding: 0 2.25rem;
       height: 48px;
       border-radius: 48px; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     input[type=submit],
     button,
     .button {
@@ -898,7 +898,7 @@ button,
   .social-block {
     position: relative;
     display: inline-block; }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .social-block {
         -webkit-transform: scale(1.3);
         -moz-transform: scale(1.3);
@@ -1036,7 +1036,7 @@ button,
       @media (min-width: 990px) {
         .main-logo img {
           height: 120px; } }
-      @media (min-width: 2000px) {
+      @media (min-width: 1900px) {
         .main-logo img {
           height: 150px; } }
   .main-subtitle {
@@ -1051,7 +1051,7 @@ button,
     @media (min-width: 990px) {
       .main-subtitle {
         text-align: left; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .main-subtitle {
         padding: 0 3rem;
         font-size: 1.75rem; } }
@@ -1071,7 +1071,7 @@ button,
     @media (min-width: 1200px) {
       .main-title {
         font-size: 4.5rem; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .main-title {
         font-size: 5rem;
         margin: 10vh; } }
@@ -1090,7 +1090,7 @@ button,
       @media (min-width: 768px) {
         .main-teaser p {
           font-size: 1.375rem; } }
-      @media (min-width: 2000px) {
+      @media (min-width: 1900px) {
         .main-teaser p {
           margin: 2.5rem 0;
           font-size: 2.375rem; } }
@@ -1160,7 +1160,7 @@ button,
       text-align: center;
       font-size: 0.875rem;
       color: #fff; }
-      @media (min-width: 2000px) {
+      @media (min-width: 1900px) {
         .main-footer-text {
           font-size: 1.75rem;
           padding-bottom: 1rem; } }
@@ -1201,7 +1201,7 @@ button,
         -ms-transform: scale(1);
         -o-transform: scale(1);
         transform: scale(1); } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .main-arrow {
         margin: 10px 1.5rem;
         -webkit-transform: scale(1.3);
@@ -1232,7 +1232,7 @@ button,
     font-size: 0.875rem;
     color: #fff;
     text-align: center; }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .main-scroll {
         width: 200px;
         font-size: 1.5rem; } }
@@ -1336,7 +1336,7 @@ button,
       .survey-wrapper {
         padding-right: 25%;
         padding-left: 25%; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .survey-wrapper {
         padding-right: 15%;
         padding-left: 15%; } }
@@ -1348,7 +1348,7 @@ button,
     @media (min-width: 768px) {
       .survey-item {
         padding: 3vh 0; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .survey-item {
         padding: 4.125vh 0; } }
   .survey-question {
@@ -1362,7 +1362,7 @@ button,
     @media (min-width: 768px) {
       .survey-question {
         font-size: 1.313rem; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .survey-question {
         font-size: 2.118rem; } }
   .survey-label {
@@ -1378,7 +1378,7 @@ button,
       .survey-label {
         padding: 0 1.5rem;
         font-size: 1.313rem; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .survey-label {
         font-size: 2rem; } }
   .survey-option {
@@ -1398,7 +1398,7 @@ button,
     @media (min-width: 768px) {
       .survey-option {
         padding: 1.5rem 0; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .survey-option {
         padding: 1.75rem 0; } }
   .survey-radio {
@@ -1413,7 +1413,7 @@ button,
     /* NEW, Spec - Firefox, Chrome, Opera */
     justify-content: center;
     align-items: center; }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .survey-radio .form-radio > input[type=radio] {
         width: 60px;
         height: 60px; }
@@ -1452,7 +1452,7 @@ button,
       padding-top: 10vh;
       padding-right: calc(45% + 5rem);
       padding-left: 5rem; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-wrapper {
       padding-right: calc(45% + 7.5rem);
       padding-left: 7.5rem; } }
@@ -1479,7 +1479,7 @@ button,
     .result-title {
       padding-right: 30%;
       font-size: 4rem; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-title {
       padding-right: 45%;
       font-size: 5rem; } }
@@ -1494,14 +1494,14 @@ button,
   @media (min-width: 768px) {
     .result-subtitle {
       font-size: 1.5rem; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-subtitle {
       padding-top: 1.75rem;
       font-size: 2.125rem; } }
 
 .result-content {
   padding-right: 0; }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-content {
       padding-right: 15%; } }
   @media (min-width: 2500px) {
@@ -1514,7 +1514,7 @@ button,
     font-weight: 500;
     line-height: 1.5;
     color: #fff; }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .result-content p {
         margin: 2rem 0;
         font-size: 1.75rem; } }
@@ -1524,7 +1524,7 @@ button,
   display: inline-block;
   margin-top: 2rem;
   padding-right: 6rem; }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-recommend {
       padding-right: 7rem; } }
   .result-recommend img {
@@ -1532,7 +1532,7 @@ button,
     bottom: 0;
     right: 0;
     height: 100px; }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .result-recommend img {
         height: 130px; } }
   .result-recommend span {
@@ -1546,10 +1546,16 @@ button,
       .result-recommend span {
         font-size: 1.25rem;
         padding: 1rem 6rem 1rem 2rem; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .result-recommend span {
         font-size: 1.5rem;
         padding: 1.5rem 10rem 1.5rem 2rem; } }
+
+.result-upper {
+  position: relative; }
+  @media (min-width: 1200px) {
+    .result-upper {
+      min-height: calc(90vh - 125px); } }
 
 .result-hero {
   position: relative;
@@ -1733,7 +1739,7 @@ button,
     .result-ornament {
       height: 87px;
       margin: 1rem -5rem 0; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-ornament {
       height: 125px;
       margin: 2rem -7.5rem 0; } }
@@ -1778,7 +1784,7 @@ button,
   @media (min-width: 1200px) {
     .result-bundling {
       padding: 4rem 5rem; } }
-  @media (min-width: 2000px) {
+  @media (min-width: 1900px) {
     .result-bundling {
       padding: 4rem 7.5rem;
       margin: 0 -7.5rem; } }
@@ -1800,7 +1806,7 @@ button,
     @media (min-width: 1200px) {
       .result-more-button .button {
         margin: 0 1.5rem; } }
-    @media (min-width: 2000px) {
+    @media (min-width: 1900px) {
       .result-more-button .button {
         width: 300px; } }
 
@@ -1843,7 +1849,7 @@ button,
     .bundling-img img {
       max-width: none;
       height: 250px; }
-      @media (min-width: 2000px) {
+      @media (min-width: 1900px) {
         .bundling-img img {
           height: 290px; } }
   .bundling-col {

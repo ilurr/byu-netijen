@@ -116,6 +116,12 @@
 			}
 		}
 	}
+	&-upper {
+		position: relative;
+		@include min-responsive($screen-large-desktop) {
+			min-height: calc(90vh - 125px);
+		} 
+	} 
 	&-hero {
 		position: relative;
 		width: 100%;
