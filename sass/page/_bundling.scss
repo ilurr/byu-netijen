@@ -11,7 +11,7 @@
 		position: relative;
 		padding: 1rem;
 		background: #fff;
-		border-radius: 12px;
+		border-radius: 0.750rem;
 		@include display-flex();
 		justify-content: space-between;
 		align-content: center;
@@ -37,10 +37,10 @@
 		}
 		img {
 			max-width: none;
-			height: 250px;
-			@include min-responsive($screen-super-desktop) {
-				height: 290px;
-			}
+			height: 15.625rem;
+			// @include min-responsive($screen-super-desktop) {
+			// 	height: 18.125rem;
+			// }
 		}
 	}
 	&-col {
@@ -64,7 +64,7 @@
 		position: relative;
 		text-align: right;
 		@include font-pack(false, 1.375rem, 700, false, false);
-		flex-basis: 110px;
+		flex-basis: 6.875rem;
 		flex-grow: 0;
 	}
 	&-quota {
@@ -102,11 +102,11 @@
 		padding: .5rem 1rem;
 		margin: 2rem 0 2rem 1.75rem;
 		background: #fff;
-		border-radius: 10px;
+		border-radius: 0.625rem;
 		@include display-flex();
 		justify-content: space-between;
 		align-items: center;
-		border: 1px solid #dfdfdf;
+		border: .063rem solid #dfdfdf;
 		@include min-responsive($screen-large-desktop) {
 			margin: 2rem 3.5rem 2rem 6.5rem;
 		}
@@ -114,17 +114,17 @@
 	&-icon {
 		position: relative;
 		margin-left: -2.75rem;
-		flex-basis: 50px;
+		flex-basis: 3.125rem;
 		flex-grow: 0;
 		@include min-responsive($screen-tablet) {
 			margin-left: -3rem;
-			flex-basis: 70px;
+			flex-basis: 4.375rem;
 		}
 		img {
-			height: 50px;
+			height: 3.125rem;
 			// box-shadow: 0 0 10px rgba(0,0,0,.1);
 			@include min-responsive($screen-tablet) {
-				height: 70px;
+				height: 4.375rem;
 			}
 		}
 	}
@@ -146,17 +146,17 @@
 		left: 0;
 		background: #28903B;
 		padding: .5rem 2rem;
-		height: 42px;
+		height: 2.625rem;
 		@include font-pack(false, 1.25rem, 700, false, #fff);
 		&:after {
 			content: '';
 			position: absolute;
-			right: -21px;
+			right: -1.313rem;
 			top: 0;
-			border-left: 21px solid transparent;
-			border-right: 21px solid transparent;
-			border-top: 21px solid #28903B;
-			border-bottom: 21px solid #28903B;
+			border-left: 1.313rem solid transparent;
+			border-right: 1.313rem solid transparent;
+			border-top: 1.313rem solid #28903B;
+			border-bottom: 1.313rem solid #28903B;
 		}
 	}
 	&-bg {

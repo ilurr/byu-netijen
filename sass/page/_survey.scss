@@ -14,14 +14,14 @@
 			padding-right: 1rem;
 			padding-left: 1rem;
 		}
-		@include min-responsive($screen-large-desktop) {
-			padding-right: 25%;
-			padding-left: 25%;
-		}
-		@include min-responsive($screen-super-desktop) {
-			padding-right: 15%;
-			padding-left: 15%;
-		}
+		// @include min-responsive($screen-large-desktop) {
+		// 	padding-right: 25%;
+		// 	padding-left: 25%;
+		// }
+		// @include min-responsive($screen-super-desktop) {
+		// 	padding-right: 15%;
+		// 	padding-left: 15%;
+		// }
 		& + .main-footer .main-footer-wrap {
 			background: $color-theme;
 		}
@@ -32,9 +32,9 @@
 		@include min-responsive($screen-tablet) {
 			padding: 3vh 0;
 		}
-		@include min-responsive($screen-super-desktop) {
-			padding: 4.125vh 0;
-		}
+		// @include min-responsive($screen-super-desktop) {
+		// 	padding: 4.125vh 0;
+		// }
 	}
 	&-question {
 		position: relative;
@@ -45,9 +45,9 @@
 		@include min-responsive($screen-tablet) {
 			font-size: 1.313rem;
 		}
-		@include min-responsive($screen-super-desktop) {
-			font-size: 2.118rem;
-		}
+		// @include min-responsive($screen-super-desktop) {
+		// 	font-size: 2.118rem;
+		// }
 	}
 	&-label {
 		position: relative;
@@ -60,9 +60,9 @@
 			padding: 0 1.5rem;
 			font-size: 1.313rem;
 		}
-		@include min-responsive($screen-super-desktop) {
-			font-size: 2rem;
-		}
+		// @include min-responsive($screen-super-desktop) {
+		// 	font-size: 2rem;
+		// }
 	}
 	&-option {
 		position: relative;
@@ -74,28 +74,28 @@
 		@include min-responsive($screen-tablet) {
 			padding: 1.5rem 0;
 		}
-		@include min-responsive($screen-super-desktop) {
-			padding: 1.75rem 0;
-		}
+		// @include min-responsive($screen-super-desktop) {
+		// 	padding: 1.75rem 0;
+		// }
 	}
 	&-radio {
 		position: relative;
 		@include display-flex();
 		justify-content: center;
 		align-items: center;
-		@include min-responsive($screen-super-desktop) {
-			.form-radio > input[type=radio] {			
-				width: 60px;
-				height: 60px;
-			}
-			.form-radio > span {
-				width: 60px;
-				height: 60px;
-				border-radius: 60px;
-			}
-		}
+		// @include min-responsive($screen-super-desktop) {
+		// 	.form-radio > input[type=radio] {			
+		// 		width: 3.750rem;
+		// 		height: 3.750rem;
+		// 	}
+		// 	.form-radio > span {
+		// 		width: 3.750rem;
+		// 		height: 3.750rem;
+		// 		border-radius: 3.750rem;
+		// 	}
+		// }
 		label {
-			margin: 0 3px;
+			margin: 0 0.188rem;
 			padding-bottom: 0;
 			@include min-responsive($screen-tablet) {
 				margin: 0 1rem;
